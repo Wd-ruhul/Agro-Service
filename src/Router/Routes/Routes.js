@@ -1,5 +1,6 @@
 import React from "react";
 import Main from "../../Layout/Main";
+import AddService from "../../Pages/Home/AddService/AddService";
 import Home from "../../Pages/Home/Home/Home"
 import Login from "../../Pages/Home/Login/Login";
 import SignUp from "../../Pages/Home/SignUp/SignUp";
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>
+      },
+      {
+        path: "/add/service",
+        element: <AddService></AddService>
       },
     ],
   },

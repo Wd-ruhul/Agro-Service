@@ -46,6 +46,9 @@ const Header = () => {
                 <li>
                   <button onClick={handleLogOut}>Sing Out</button>
                 </li>
+                <li>
+                  <button onClick={handleLogOut}>Sing Out</button>
+                </li>
               </>
             ) : (
               <li>
@@ -80,13 +83,18 @@ const Header = () => {
           </ul>
         </div>
         <a href="/" className="btn btn-ghost normal-case text-xl">
-          daisyUI
+          Agro Services
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           {user?.email ? (
             <>
+              <li>
+                <button onClick={handleLogOut} className="btn-ghost">
+                  Sing Out
+                </button>
+              </li>
               <li>
                 <button onClick={handleLogOut} className="btn-ghost">
                   Sing Out
