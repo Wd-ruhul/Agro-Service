@@ -96,9 +96,9 @@ const Header = () => {
                 </button>
               </li>
               <li>
-                <button onClick={handleLogOut} className="btn-ghost">
-                  Sing Out
-                </button>
+                <Link to="/add/service" className="btn-ghost">
+                  Add Service
+                </Link>
               </li>
             </>
           ) : (
