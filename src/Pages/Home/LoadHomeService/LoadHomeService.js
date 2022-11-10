@@ -6,7 +6,7 @@ import HomeServiceCard from './HomeServiceCard';
 const LoadHomeService = () => {
   const [homeServices, setHomeServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/homeservices")
+    fetch("https://assignment-eleven-server-topaz.vercel.app/homeservices")
       .then((res) => res.json())
       .then((data) => setHomeServices(data));
   }, []);

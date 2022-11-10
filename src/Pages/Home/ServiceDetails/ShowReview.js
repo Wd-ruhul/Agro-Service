@@ -4,7 +4,7 @@ import ShowReviewCard from './ShowReviewCard';
 const ShowReview = () => {
   const [showReview, setShowReview] = useState([]);
     useEffect(() => {
-      fetch("http://localhost:5000/showreview")
+      fetch("https://assignment-eleven-server-topaz.vercel.app/showreview")
         .then((res) => res.json())
         .then((data) => setShowReview(data));
     }, []);

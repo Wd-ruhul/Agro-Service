@@ -25,7 +25,7 @@ const ServiceDetails = () => {
       email,
       review
     }
-    fetch("http://localhost:5000/review", {
+    fetch("https://assignment-eleven-server-topaz.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -34,7 +34,7 @@ const ServiceDetails = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.log(data);
         if (data.acknowledged) {
           alert("Data Added Successfully");
           event.target.reset();

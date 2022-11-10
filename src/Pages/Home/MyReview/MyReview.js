@@ -7,7 +7,7 @@ const MyReview = () => {
   const [myReview, setMyReview] = useState([]);
   
 useEffect(() => {
-  fetch(`http://localhost:5000/myreview?email=${user?.email}`)
+  fetch(`https://assignment-eleven-server-topaz.vercel.app/myreview?email=${user?.email}`)
     .then((res) => res.json())
     .then((data) => setMyReview(data));
 }, [user?.email]);

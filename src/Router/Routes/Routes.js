@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         path: "/servicedetails/:id",
         element: <ServiceDetails></ServiceDetails>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/servicedetails/${params.id}`),
+          fetch(`https://assignment-eleven-server-topaz.vercel.app/servicedetails/${params.id}`),
       },
       {
         path: "/myreview",

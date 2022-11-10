@@ -10,7 +10,7 @@ const AddService = () => {
   const handleAddService = (event) => {
     event.preventDefault();
     console.log(addService);
-    fetch("http://localhost:5000/add/service", {
+    fetch("https://assignment-eleven-server-topaz.vercel.app/add/service", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -27,6 +27,7 @@ const AddService = () => {
         }
       });
   };
+  
 
     const handleInputBlur = (event) => {
       const field = event.target.name;
