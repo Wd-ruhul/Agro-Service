@@ -12,7 +12,7 @@ const LoadHomeService = () => {
   }, []);
   return (
     <div>
-      <h2 className='text-4xl text-center text-primary m-3'>services</h2>
+      <h2 className='text-4xl text-center text-primary m-3'>services </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-5">
         {homeServices.map((service) => (
           <HomeServiceCard

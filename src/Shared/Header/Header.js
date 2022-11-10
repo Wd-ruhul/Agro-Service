@@ -95,6 +95,9 @@ const Header = () => {
             </li>
           )}
           <li tabIndex={0}></li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
         </ul>
       </div>
     </div>

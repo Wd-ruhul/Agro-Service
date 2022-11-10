@@ -32,7 +32,10 @@ const AddService = () => {
       setAddService(newService);
     };
   return (
+   <div>
+   <h2 className='text-4xl text-primary text-center'>Add Services</h2>
     <Form onSubmit={handleAddService} className="card-body ">
+    
       <div className="form-control">
         <input
           onBlur={handleInputBlur}
@@ -77,6 +80,7 @@ const AddService = () => {
         />
       </div>
     </Form>
+    </div>
   );
 };
 
