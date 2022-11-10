@@ -20,7 +20,7 @@ const HomeServiceCard = ({ service }) => {
           <p>{info.slice(0, 100)}...</p>
           <h4>price: ${price}</h4>
           <div className="card-actions">
-            <Link to={`/checkout/${_id}`}>
+            <Link to={`/servicedetails/${_id}`}>
               <button className="btn btn-primary">View Details</button>
             </Link>
           </div>
