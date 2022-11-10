@@ -21,7 +21,7 @@ const LoadHomeService = () => {
           ></HomeServiceCard>
         ))}
       </div>
-      <Link className='grid justify-center'>
+      <Link to='/services' className='grid justify-center'>
         <button className="btn btn-primary">See all Service</button>
       </Link>
     </div>
