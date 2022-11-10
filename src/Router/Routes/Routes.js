@@ -3,6 +3,7 @@ import Main from "../../Layout/Main";
 import AddService from "../../Pages/Home/AddService/AddService";
 import Home from "../../Pages/Home/Home/Home"
 import Login from "../../Pages/Home/Login/Login";
+import MyReview from "../../Pages/Home/MyReview/MyReview";
 import ServiceDetails from "../../Pages/Home/ServiceDetails/ServiceDetails";
 import Services from "../../Pages/Home/Services/Services";
 import SignUp from "../../Pages/Home/SignUp/SignUp";
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         element: <ServiceDetails></ServiceDetails>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/servicedetails/${params.id}`),
+      },
+      {
+        path: "/myreview",
+        element: <MyReview></MyReview>
       },
     ],
   },

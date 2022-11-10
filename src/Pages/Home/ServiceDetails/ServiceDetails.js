@@ -2,6 +2,7 @@ import React  from 'react';
 import { Form, useLoaderData } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../../Context/AuthProvider';
+import ShowReview from './ShowReview';
 
 const ServiceDetails = () => {
 
@@ -41,23 +42,17 @@ const ServiceDetails = () => {
       });
   };
 
-    // const handleInputBlur = (event) => {
-    //   const field = event.target.name;
-    //   const value = event.target.value;
-    //   const newReview = { ...addReview };
-    //   newReview[field] = value;
-    //   setAddReview(newReview);
-    // };
+   
 
 
 
   return (
     <div>
       <div className="text-4xl text-center m-5">
-        <h2>Service Details</h2>
+        <h2 className="text-green-900">Service Details</h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-rows-2 lg:grid-cols-2">
-        <div className="card w-96 bg-base-100 shadow-xl">
+      <div className="grid grid-cols-1 md:grid-rows-1 lg:grid-cols-1">
+        <div className="card max-w-screen-md mx-auto bg-base-100 shadow-xl">
           <figure>
             <img src={url} alt="img" />
           </figure>
@@ -73,47 +68,53 @@ const ServiceDetails = () => {
             </div>
           </div>
         </div>
+        <div className="mx-auto  ">
+          <div className="text-4xl text-center m-5">
+            <h2 className="text-green-900"> Reviews</h2>
+          </div>
+          <ShowReview></ShowReview>
+        </div>
+
         <div>
-          <div className="text-4xl text-center">
+          <div className="text-4xl text-center text-green-900">
             <h2>Add Review For This Service</h2>
           </div>
-          <Form onSubmit={handleAddService} className="card-body ">
-            <div className="form-control">
-              <input
-                
-                type="text"
-                placeholder="Name"
-                name="name"
-                className="input input-bordered input-primary w-2/4 "
-              />
-            </div>
-            <div className="form-control">
-              <input
-               
-                type="text"
-                placeholder="Image Url"
-                name="url"
-                className="input input-bordered input-primary w-2/4 "
-              />
-            </div>
-          
-            <div className="form-control">
-              <textarea
-                
-                className="textarea textarea-primary w-2/4"
-                placeholder="Description"
-                name="review"
-              ></textarea>
-            </div>
+          <div className=" mx-auto w-3/4 ">
+            <Form onSubmit={handleAddService} className="card-body ">
+              <div className="form-control">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  className="input input-bordered input-primary w-2/4 "
+                />
+              </div>
+              <div className="form-control">
+                <input
+                  type="text"
+                  placeholder="Image Url"
+                  name="url"
+                  className="input input-bordered input-primary w-2/4 "
+                />
+              </div>
 
-            <div className="form-control mt-6">
-              <input
-                className="btn btn-primary w-2/4 "
-                type="submit"
-                value="Add review"
-              />
-            </div>
-          </Form>
+              <div className="form-control">
+                <textarea
+                  className="textarea textarea-primary w-2/4"
+                  placeholder="Description"
+                  name="review"
+                ></textarea>
+              </div>
+
+              <div className="form-control mt-6">
+                <input
+                  className="btn btn-primary w-2/4 "
+                  type="submit"
+                  value="Add review"
+                />
+              </div>
+            </Form>
+          </div>
         </div>
       </div>
     </div>
